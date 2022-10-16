@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AccountController;
+use App\Http\Controllers\DonateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/{any}', 'home')
+    ->where('any', '.*');
 
-Route::get('/donate', [AccountController::class, 'donate']);
-Route::post('/donate', [AccountController::class, 'donate']);
+Route::post('/donate', [DonateController::class, 'donate']);

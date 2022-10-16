@@ -1,0 +1,167 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+label.required::after {
+    content: '*';
+    margin-right: 4px;
+    color: red;
+}
+
+.expiration {
+    display: flex;
+}
+
+.expiration_span {
+    font-size: 23px;
+}
+
+.image {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 15px;
+    background-color: aqua;
+    object-fit: cover;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url('/images/mountain.jpg')
+}
+
+.info {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    background: radial-gradient(#e66465, #9198e5);
+    max-width: 80%;
+}
+.content {
+    margin-top: 50px;
+    width: 100%;
+    height: 700px;
+}
+#range {
+    background: linear-gradient(to right, #33c020 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+    border: solid 1px #82CFD0;
+    border-radius: 8px;
+    height: 7px;
+    width: 100%;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+form {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 70px;
+    border-radius: 5%;
+    background: green;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+.range-wrap{
+    width: 500px;
+    position: relative;
+    margin-top: 15px;
+}
+.range-value{
+    position: absolute;
+    top: -50%;
+}
+.range-value span{
+    margin-top: -6px;
+    text-align: center;
+    background: green;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.button-custom {
+    justify-content: flex-end;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.validateFail {
+    border: 2px solid rgb(240, 51, 51);
+}
+
+.form-control-red {
+    border-color: #FF0000 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;
+}
+
+#success {
+    z-index: 10;
+    position:fixed !important;
+    top: 26% !important;
+    left: 36% !important;
+    with: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: 200px !important;
+    visibility: hidden;
+}
+
+#errors {
+    z-index: 10;
+    position:fixed !important;
+    top: 26% !important;
+    left: 36% !important;
+    with: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: 200px !important;
+    visibility: hidden;
+}
+
+.open {
+    visibility: none !important;
+}
+
+
+#popup-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+    visibility: hidden;
+}
+
+.popup-add-open {
+    visibility: initial !important;
+    transition: 0.3s;
+}
+
+.signup-img {
+    position: relative;
+    width: 415px !important;
+    margin-bottom: -8px;
+}
+
+.register-form {
+    padding: 0px 141px 75px 0px !important;
+    margin-bottom: -8px;
+}

@@ -14,8 +14,8 @@ class RepositoriesServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            \App\Contracts\AccountContract::class,
-            \App\Repositories\AccountRepository::class
+            \App\Contracts\DonateContract::class,
+            \App\Repositories\DonateRepository::class
         );
     }
 }
